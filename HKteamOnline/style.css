@@ -1,0 +1,18 @@
+h1{
+    /*đặt màu cho chữ*/
+    color: blue;
+    /*dùng mã màu hexa*/
+    color: #ff0000;
+    /*dùng mã rgb: phối màu giữa red, green, blue*/
+    color: rgb(0, 255, 0);
+    /*dùng mã rgba tương tự rgb, thêm alpha thể hiện cho độ mờ của màu*/
+    color: rgba(255, 0, 0, 1);
+    /*kiểu font*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; /*độ dày*/
+    font-size: 50px; /*kích thước*/
+}
+
+textarea{
+    display: block;
+}
