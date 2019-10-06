@@ -1,0 +1,53 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: white;
+    }
+    
+    .button {
+        width: 40px;
+        height: 25px;
+        font-size: 15px;
+        margin: 3px;
+        cursor: pointer;
+        border: none
+    }
+    
+    .textview {
+        width: 145px;
+        margin: 5px;
+        font-size: 15px;
+        padding: 5px 20px 5px 20px;
+        border: gainsboro;
+        background-color: white;
+    }
+    
+    .footer_calculator {
+        padding: 0px 10px 0px 10px;
+        width: 200px;
+        height: 260px;
+        background-color: red;
+        position: relative;
+        border: 3px solid greenyellow;
+    }
+    
+    .number {
+        background-color: white;
+        font-weight: bold
+    }
+    
+    .symbol {
+        background-color: #fbfbfb;
+    }
+    
+    .orange:hover {
+        background-color: orange
+    }
+    
+    .blue:hover {
+        background-color: skyblue
+    }

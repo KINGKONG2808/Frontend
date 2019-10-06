@@ -1,0 +1,16 @@
+#header h1 {
+    color: red;
+    text-align: center
+}
+
+#body a {
+    text-decoration: none
+}
+
+#body a h3 {
+    color: pink;
+}
+
+#body p {
+    text-align: center
+}

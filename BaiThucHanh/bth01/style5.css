@@ -1,0 +1,8 @@
+table, tr{
+    background: pink;
+    color: white;
+}
+th:hover {
+    background: greenyellow;
+    color: black;
+}

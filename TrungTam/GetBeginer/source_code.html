@@ -1,0 +1,512 @@
+<!-- HTML4 -->
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> -->
+<!DOCTYPE html>
+<!--  am chi dung HTML5  -->
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Cho phep hien thi unicode: tieng viet, tieng nhat, han -->
+    <meta name="description" content="Khoa hoc HTML co ban" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Spring, MySql, Maven" />
+    <meta name="author" content="DaiNguyen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> HTML & CSS Core </title>
+
+    <!-- Sử dụng internal -->
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial;
+            /* tên font */
+            font-size: 12px;
+            /* cỡ của font */
+            line-height: 18px;
+            /* độ cao của font trên mỗi dòng */
+        }
+        /* ------------------------- H E A D E R ----------------------------- */
+        
+        #header nav {
+            display: inline-block;
+            /* thay đổi inline hoặc block */
+        }
+        
+        #header nav ul {
+            display: inline-block;
+        }
+        
+        #header nav ul li {
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        #header nav ul li a,
+        #header nav ul li span {
+            background: #EEE;
+            padding: 2px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #444;
+        }
+        
+        #header #logo {
+            width: 132px;
+            height: 20px;
+            vertical-align: middle;
+        }
+        
+        #header {
+            background-color: #AEC6CF;
+            padding: 0px 30px 0px 30px;
+            /* top right buttom left */
+            max-width: 940px;
+            margin: auto;
+            /* tự động căn giữa */
+        }
+        /* ------------------------- B O D Y ----------------------------- */
+        
+        #body {
+            max-width: 940px;
+            margin: auto;
+        }
+        
+        #main {
+            float: left;
+            width: 60%;
+            /* chiếm 60% độ rộng của phần tử cha */
+        }
+        
+        #widget {
+            float: right;
+            width: 38%;
+            /* chiếm 30% độ rộng của phần tử cha */
+        }
+        
+        #main .category {
+            border-radius: 10px;
+            background: red;
+        }
+        
+        #main .category h3 {
+            padding: 5px;
+            color: white;
+            /*mầu của văn bản*/
+        }
+        
+        #main .category h3::before {
+            /* pesudo elements */
+            content: "";
+            /* nội dung văn bản */
+            background-image: url(category.png);
+            /* ảnh back-ground */
+            display: inline-block;
+            background-size: 20px 20px;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 6px;
+            margin-left: 6px;
+        }
+        
+        #widget .box {
+            background-color: #ffebcd;
+        }
+        
+        #widget .box h3 {
+            padding: 5px;
+            background-color: darkgray;
+            border-left: 10px solid yellow;
+        }
+        
+        #widget .box .box-content {
+            padding-left: 8px;
+            padding-bottom: 15px;
+        }
+        /* Calculator */
+        
+        table.calculator {
+            width: 100%;
+            border: 2px solid #cab1b1;
+            box-shadow: 0 0 1px 1px #f1f1f1;
+        }
+        
+        table.calculator input[type="button"] {
+            border: none;
+            width: 100%;
+            padding: 5px;
+        }
+        
+        table.calculator input[type="button"]:hover {
+            background-color: yellow;
+        }
+        
+        table.calculator input[type="text"] {
+            border: 1px solid #ccc;
+            width: 100%;
+            font-size: 18px;
+            text-align: right;
+            font-weight: bold;
+        }
+        /* ------------------------- F O O T E R ----------------------------- */
+        
+        #footer {
+            max-width: 940px;
+            margin: auto;
+            display: flex;
+            background-color: #AEC6CF;
+            padding: 20px 30px;
+        }
+        
+        #footer .footer-socical {
+            padding-left: 20px;
+        }
+        
+        .clear-with-height {
+            clear: both;
+            height: 10px;
+        }
+        
+        #btn_scroll {
+            position: fixed;
+            bottom: 20px;
+            right: 30px
+        }
+        /* ------------------------- R e s p o n s i v e ----------------------------- */
+        
+        @media only screen and (min-width: 400px) {
+            #main {
+                float: none;
+                width: 100%;
+            }
+            #widget {
+                float: none;
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (min-width: 800px) {
+            #main {
+                float: left;
+                width: 60%;
+            }
+            #widget {
+                float: right;
+                width: 38%;
+            }
+        }
+        /* ------------------------- M E N U ----------------------------- */
+        /* menu https://www.tutorialrepublic.com/jquery-tutorial/jquery-add-and-remove-css-classes.php */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            display: block;
+            min-width: 100px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: cyan;
+            border-left: 5px solid red;
+        }
+        
+        .dropdown-content a:before {
+            content: " > ";
+        }
+        /* ------------------------- C O M M O N ----------------------------- */
+        
+        .button {
+            background-color: midnightblue;
+            border-radius: 12px;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- javascript -->
+    <!-- include external JS file. -->
+    <script src="main.js"></script>
+
+    <!-- using internal -->
+    <script type="text/javascript">
+        function println(message) {
+            console.log(message);
+        }
+
+        function sum(a, b) {
+            if (typeof(a) != "number" || typeof(b) != "number") {
+                println("parameter must be number type");
+                return 0;
+            }
+            // kiểm tra tham số đầu vào phải là kiểu số.
+            return a + b;
+        }
+
+        /* định nghĩa đối tượng trong javascript */
+        var Persion = {
+            firstName: "",
+            lastName: "",
+            fullName: function() {
+                return Persion.firstName + " " + Persion.lastName;
+            }
+        }
+        Persion.firstName = "Nguyen Dinh";
+        Persion.lastName = "Dai";
+        println(Persion.fullName());
+
+        /* định nghĩa class trong javascript */
+        function Car(name, model, price) {
+            this.name = name;
+            this.model = model;
+            this.price = price;
+
+            this.getInfo = function() {
+                console.log(this.name + " " + this.model + " " + this.price);
+            };
+        }
+        var kia = new Car("Kia", "XYZ", 300);
+        kia.getInfo();
+
+        var camry = new Car("Camry", "ABC", 800);
+        camry.getInfo();
+
+        Car.prototype.nationality = "English";
+        console.log(kia.nationality);
+        console.log(camry.nationality);
+
+        /* javascript thao tác với DOM */
+        function subcrible() {
+            alert(window.document.getElementById("txtSubscrible").value);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function setSubcrible(email) {
+            window.document.getElementById("txtSubscrible").value = email;
+        }
+
+        function setDvqc(_dvqc) {
+            document.getElementById("dvqc").innerHTML = "<b>" + _dvqc + "</b>"
+        }
+
+        /* calculator */
+        var Calculator = {
+            cals(buttonValue) {
+                if (buttonValue == 'C') {
+                    document.getElementById('valueshow').value = '0';
+                } else {
+                    if (document.getElementById('valueshow').value == '0' || document.getElementById('valueshow').value == 'Error') {
+                        document.getElementById('valueshow').value = buttonValue;
+                    } else {
+                        document.getElementById('valueshow').value += buttonValue;
+                    }
+                }
+            },
+            cal(equation) {
+                try {
+                    var answer = eval(equation);
+                    document.getElementById('valueshow').value = answer;
+                } catch (e) {
+                    document.getElementById('valueshow').value = "Error";
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="setSubcrible('dainguyendinh.85@gmail.com');setDvqc('Công ty cổ phần ABC');">
+    <!-- Phần đầu -->
+    <div id="header" name="header">
+        <!-- logo của công ty. -->
+        <img src="devpro.png" id="logo" onclick="goBack();" />
+        <!-- menu của hệ thống. thẻ nav tương đương thẻ div dùng để xác định chứa menu. -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <li><a href="#">HTML</a>
+                        <li><a href="#">CSS</a>
+                            <li><a href="#">JavaScript</a>
+                                <li><a href="#">JQuery</a>
+                                    <li>
+                                        <div class="dropdown">
+                                            <span>Java</span>
+                                            <div class="dropdown-content">
+                                                <a href="#">Basic</a>
+                                                <a href="#">Advance</a>
+                                            </div>
+                                        </div>
+                                    </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--phần giữa -->
+    <div id="body" name="body">
+        <!-- chứa thông tin chính của trang web -->
+        <div id="main">
+            <div class="category">
+                <h3>Thể thao</h3>
+            </div>
+            <div id="article">
+                <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+                <div>
+                    (Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi
+                    của người dân lên trên cái ghế của mình…
+                </div>
+                <div style="text-align: right;">
+                    xem tiếp...
+                </div>
+            </div>
+            <div id="article">
+                <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+                <div>
+                    (Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi
+                    của người dân lên trên cái ghế của mình…
+                </div>
+                <div style="text-align: right;">
+                    xem tiếp...
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Giáo dục</h3>
+            </div>
+            <div id="article">
+                <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+                <div>
+                    (Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi
+                    của người dân lên trên cái ghế của mình…
+                </div>
+                <div style="text-align: right;">
+                    xem tiếp...
+                </div>
+            </div>
+        </div>
+        <!-- chứa thông tin thêm, hoặc quảng cáo -->
+        <div id="widget">
+            <div class="box">
+                <h3>Hot topics</h3>
+                <div class="box-content">
+                    <a href="/howto/howto_js_tabs.asp">Tabs</a><br>
+                    <a href="/howto/howto_css_dropdown.asp">Dropdowns</a><br>
+                    <a href="/howto/howto_js_accordion.asp">Accordions</a><br>
+                    <a href="/howto/howto_js_sidenav.asp">Side Navigation</a><br>
+                    <a href="/howto/howto_js_topnav.asp">Top Navigation</a><br>
+                    <a href="/howto/howto_css_modals.asp">Modal Boxes</a><br>
+                    <a href="/howto/howto_js_progressbar.asp">Progress Bars</a><br>
+                    <a href="/howto/howto_css_parallax.asp">Parallax</a><br>
+                    <a href="/howto/howto_css_login_form.asp">Login Form</a><br>
+                    <a href="/howto/howto_html_include.asp">HTML Includes</a><br>
+                    <a href="/howto/howto_google_maps.asp">Google Maps</a><br>
+                    <a href="/howto/howto_js_rangeslider.asp">Range Sliders</a><br>
+                    <a href="/howto/howto_css_tooltip.asp">Tooltips</a><br>
+                    <a href="/howto/howto_js_slideshow.asp">Slideshow</a><br>
+                    <a href="/howto/howto_js_filter_lists.asp">Filter List</a><br>
+                    <a href="/howto/howto_js_sort_list.asp">Sort List</a><br>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Calculator</h3>
+                <div class="box-content">
+                    <table class="calculator">
+                        <tr>
+                            <td colspan="4">
+                                <input id="valueshow" type="text" value="0" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value=1 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value=2 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value=3 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value='/' onClick="Calculator.cals(this.value);"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value=4 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value=5 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value=6 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value='x' onClick="Calculator.cals('*');"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value=7 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value=8 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value=9 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value='-' onClick="Calculator.cals(this.value);"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value=0 onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value='.' onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value='C' onClick="Calculator.cals(this.value);"></td>
+                            <td><input type="button" value='+' onClick="Calculator.cals(this.value);"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <input type="button" class="equal" value='=' onClick="Calculator.cal(document.getElementById('valueshow').value);">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Subcrible</h3>
+                <div class="box-content">
+                    <input type="text" id="txtSubscrible" style="width: 88%;" />
+                    <input type="button" value="OK" onclick="subcrible();" class="button" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear-with-height"></div>
+
+    <!-- phần cuối: chia làm 2 -->
+    <div id="footer" name="footer">
+        <!-- phần 1: thông tin của công ty -->
+        <div class="footer-information">
+            <b>Cơ quan của TW Hội Khuyến học Việt Nam</b><br> Giấy phép hoạt động báo điện tử Dân trí trên Internet số 378/GP - BTTTT Hà Nội, ngày 16-09-2013.<br> Tòa soạn: Số 2 (nhà 48) Giảng Võ, Quận Đống Đa, Hà Nội<br> Điện thoại: 024-3736-6491. Fax:
+            024-3736-6490
+            <br> Email: <a href="mailto:info@dantri.com.vn" title="Gửi email tới Dân Trí" rel="nofollow">info@dantri.com.vn</a>. Website: <a href="https://www.dantri.com.vn" title="Xem trang Dân Trí" rel="nofollow">https://www.dantri.com.vn</a>
+            <br>
+            <p>
+                <i>
+	                    Mọi hành động sử dụng nội dung đăng tải trên Báo điện tử Dân trí tại địa chỉ www.dantri.com.vn
+	                    phải<br> có sự đồng ý bằng văn bản của Báo điện tử Dân trí.
+	                </i>
+            </p>
+        </div>
+        <!-- socical page của trang công ty. -->
+        <div class="footer-socical">
+            Đơn vị quảng cáo: <span id="dvqc"></span><br/> Hotline: 0942.86.11.33 <br/> Xem bản mobile:
+        </div>
+    </div>
+
+    <div id="btn_scroll">
+        <img src="/img/devpro.png" alt="p1" width="100">
+    </div>
+
+</body>
+
+</html>

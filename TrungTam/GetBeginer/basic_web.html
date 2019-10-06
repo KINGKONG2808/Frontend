@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="DevPro VietNam" />
+    <meta name="keywords" content="devpro.vn" />
+    <meta name="author" content="kingkong" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPro Việt Nam</title>
+    <!--use internal (has three option for css: inline, internal, external)-->
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial;
+            /*font cho trang*/
+            font-size: 12px;
+            /*co chu*/
+            line-height: 15px/*do cao font tren moi dong*/
+        }
+        /*header*/
+        
+        #header nav {
+            /*thay doi dang inline hoac block*/
+            display: inline-block;
+        }
+        
+        #header nav ul {
+            display: inline-block;
+        }
+        
+        #header nav ul li {
+            display: inline-block;
+            margin: 5px
+        }
+        
+        #header nav ul li a,
+        #header nav ul li span {
+            background: #EEE;
+            padding: 2px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #444;
+        }
+        
+        #header #logo {
+            width: 132px;
+            height: 20px;
+            vertical-align: middle;
+            /*can giua trong the header theo chieu doc*/
+        }
+        
+        #header {
+            background-color: #AEC6CF;
+            padding: 0px 30px 0px 30px;
+            /* can chinh noi dung theo: top-right-button-left*/
+            max-width: 900px;
+            margin: auto;
+            /*can chinh vi tri*/
+            position: sticky;
+            top: 0
+            /*can header ontop va luon cach body theo padding*/
+        }
+        /*body*/
+        
+        #body {
+            max-width: 900px;
+            margin: auto;
+            padding-top: 20px
+        }
+        
+        #main {
+            float: left;
+            /*thuoc tinh float dung de chia bo cuc layout trang web*/
+            width: 60%;
+            /*do rong phan tu trang*/
+        }
+        
+        #widget {
+            float: right;
+            width: 30%;
+        }
+        
+        #main .category_sport h3::before {
+            content: ' ';
+            background-image: url('/img/sport.png');
+            background-size: 30px 23px;
+            padding: 2px 5px 5px 25px;
+            vertical-align: middle;
+        }
+        
+        #main .category_education h3::before {
+            content: ' ';
+            background-image: url('/img/edu.png');
+            background-size: 28px 28px;
+            padding: 0px 0px 12px 28px;
+            vertical-align: middle
+        }
+        
+        #main .category_sport,
+        .category_education {
+            border-radius: 15px;
+            /*bo vien background*/
+            background: red;
+        }
+        
+        #main .category_sport,
+        .category_education h3 {
+            padding: 5.5px;
+            color: white
+        }
+        
+        #widget .box {
+            background-color: #ffebcd;
+        }
+        
+        #widget .box h3 {
+            border-left: 15px yellow !important;
+            padding: 5px;
+            background-color: darkgrey
+        }
+        
+        #widget .box .box-content {
+            padding-left: 10px;
+            padding-bottom: 20px
+        }
+        /*footer*/
+        
+        .clear-with-height {
+            clear: both;
+            /*clear thuoc tinh float cua body de khong bi nhay trang*/
+            height: 15px;
+            /*footer cach body 10px*/
+        }
+        
+        #footer {
+            background-color: #AEC6CF;
+            padding: 20px 30px 10px 30px;
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            /*cac thuoc tinh theo tung cot*/
+        }
+        
+        #footer .footer-social {
+            padding-left: 30px;
+        }
+        
+        #btn_totop {
+            position: fixed;
+            bottom: 20px;
+            right: 30px
+        }
+        /*responsive*/
+        
+        @media only screen and (min-width: 400px) {
+            #main {
+                float: none;
+                width: 100%
+            }
+            #widget {
+                float: none;
+                width: 100%
+            }
+        }
+        
+        @media only screen and (min-width: 800px) {
+            #main {
+                float: left;
+                width: 60%
+            }
+            #widget {
+                float: right;
+                width: 30%
+            }
+        }
+        /*dropdown menu*/
+        
+        .dropdown {
+            position: relative;
+            /*static*/
+            display: inline-block;
+        }
+        
+        .dropdown_content {
+            position: absolute;
+            display: none;
+        }
+        
+        .dropdown:hover .dropdown_content {
+            display: block;
+        }
+        
+        .dropdown_content a {
+            background-color: yellow;
+            color: purple;
+            padding: 5px 5px;
+            text-decoration: none;
+            display: block;
+            min-width: 100px;
+        }
+        
+        .dropdown_content a:hover {
+            background-color: white;
+            color: black;
+            border-left: 5px solid yellowgreen;
+        }
+        
+        .dropdown_content a:before {
+            content: " > ";
+        }
+    </style>
+    <link rel="stylesheet" href="design_calculator.css">
+    <!--javascrip - using internal-->
+    <!--<script type="text/javascript">
+        console.log("Hello bitch..."); //log infor
+        console.error("what the hell are you?"); // log error
+    </script>-->
+
+    <!--include jquery-->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+    <script src="jquery.js"></script>
+
+</head>
+
+<body>
+    <div id="header" name="header">
+        <!--onclick="goBack();"-->
+        <img src="/img/devpro.png" id="logo" style="display: none" />
+        <nav style="display: inline-block; vertical-align: middle;">
+            <ul>
+                <li><a href="https://www.devpro.edu.vn/">Home</a>
+                    <li><a href="#">HTML</a>
+                        <li><a href="#">CSS</a>
+                            <li><a href="#">JavaScript</a>
+                                <li><a href="#">JQuery</a>
+                                    <li>
+                                        <div class="dropdown">
+                                            <span><a href="#">Java</a></span>
+                                            <div class="dropdown_content">
+                                                <a href="#">Basic</a>
+                                                <a href="#">Advance</a>
+                                            </div>
+                                        </div>
+                                    </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="body" name="body">
+        <div id="main">
+            <div class="category_sport">
+                <h3>Thể thao</h3>
+            </div>
+            <div id="article1">
+                <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+                <div>
+                    (Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi
+                    của người dân lên trên cái ghế của mình…
+                </div>
+                <div style="text-align: right; color: skyblue">
+                    <!--can le text ben phai-->
+                    xem tiếp...
+                </div>
+            </div>
+            <div id="article2">
+                <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+                <div>
+                    (Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi
+                    của người dân lên trên cái ghế của mình…
+                </div>
+                <div style="text-align: right; color: skyblue">
+                    xem tiếp...
+                </div>
+            </div>
+            <div class="category_education">
+                <h3>Giáo dục</h3>
+            </div>
+            <div id="article3">
+                <h3>Làm giám sát mà phải dò ý Bí thư, Chủ tịch, sợ ghế lung lay thì… hỏng!</h3>
+                <div>
+                    (Dân trí) - Góp ý báo cáo kiểm điểm hoạt động của UB Trung ương MTTQ Việt Nam trình Đại hội đại biểu toàn quốc lần thứ IX của Mặt trận, đại biểu Vũ Trọng Kim nêu tiêu chuẩn với cán bộ làm công tác giám sát, phản biện phải bản lĩnh, phải đặt quyền lợi
+                    của người dân lên trên cái ghế của mình…
+                </div>
+                <div style="text-align: right; color: skyblue">
+                    xem tiếp...
+                </div>
+            </div>
+        </div>
+        <div id="widget">
+            <div class="box">
+                <h3>Subcrible</h3>
+                <div class="box-content">
+                    <input type="text" id="txtSubscrible" />
+                    <input type="button" value="OK" onclick="subscrible();" />
+                </div>
+            </div>
+            <div class="box">
+                <h3>Subcrible</h3>
+                <div class="box-content">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="box">
+                <h3>Subcrible</h3>
+                <div class="box-content">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="box">
+                <h3>Subcrible</h3>
+                <div class="box-content">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="box">
+                <h3>Subcrible</h3>
+                <div class="box-content">
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear-with-height"></div>
+
+    <div id="footer" name="footer">
+        <div class="footer-information">
+            <b>Cơ quan của TW Hội Khuyến học Việt Nam</b><br> Giấy phép hoạt động báo điện tử Dân trí trên Internet số 378/GP - BTTTT Hà Nội, ngày 16-09-2013.<br> Tòa soạn: Số 2 (nhà 48) Giảng Võ, Quận Đống Đa, Hà Nội<br> Điện thoại: 024-3736-6491. Fax:
+            024-3736-6490
+            <br> Email: <a href="mailto:info@dantri.com.vn" title="Gửi email tới Dân Trí" rel="nofollow">info@dantri.com.vn</a>. Website: <a href="https://www.dantri.com.vn" title="Xem trang Dân Trí" rel="nofollow">https://www.dantri.com.vn</a><br>
+            <p>
+                <i>
+                            Mọi hành động sử dụng nội dung đăng tải trên Báo điện tử Dân trí tại địa chỉ www.dantri.com.vn
+                            phải<br> có sự đồng ý bằng văn bản của Báo điện tử Dân trí.
+                        </i>
+            </p>
+        </div>
+        <div class="footer-socical">
+            Đơn vị quảng cáo: <span id="dvqc"></span><br/> Hotline: 0942.86.11.33 <br/> Xem bản mobile:
+        </div>
+        <div class="footer_calculator">
+            <br>
+            <h2>CALCULATION</h2><br>
+            <form name="calculatorForm">
+                <input type="text" name="textview" class="textview" disabled>
+            </form>
+            <table>
+                <tr>
+                    <td><input type="button" class="button orange symbol" value="√" disabled></td>
+                    <td><input type="button" class="button orange symbol" value="x²" disabled></td>
+                    <td><input type="button" class="button orange symbol" value="⇦" id="back"></td>
+                    <td><input type="button" class="button blue symbol" value="÷" id="division" </td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button orange number" value="7" id="seven"></td>
+                    <td><input type="button" class="button orange number" value="8" id="eight"></td>
+                    <td><input type="button" class="button orange number" value="9" id="nine"></td>
+                    <td><input type="button" class="button blue symbol" value="x" id="permit"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button orange number" value="4" itemref="four"></td>
+                    <td><input type="button" class="button orange number" value="5" id="five"></td>
+                    <td><input type="button" class="button orange number" value="6" id="six"></td>
+                    <td><input type="button" class="button blue symbol" value="-" id="minus"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button orange number" value="1" id="one"></td>
+                    <td><input type="button" class="button orange number" value="2" id="two"></td>
+                    <td><input type="button" class="button orange number" value="3" id="three"></td>
+                    <td><input type="button" class="button blue symbol" value="+" id="plus"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button orange symbol" value="C" id="delete"></td>
+                    <td><input type="button" class="button orange number" value="0" id="zero"></td>
+                    <td><input type="button" class="button orange symbol" value="." id="dot"></td>
+                    <!--onclick="equalTo()"-->
+                    <td><input type="button" class="button blue symbol" value="=" id="equalTo"></td>
+                </tr>
+            </table>
+        </div>
+        <script src="calculator.js"></script>
+    </div>
+
+    <div id="btn_totop">
+        <img src="/img/devpro.png" alt="pt2" width="100">
+    </div>
+</body>
+
+</html>

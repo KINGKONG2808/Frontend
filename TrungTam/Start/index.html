@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!--day la comment am chi dung html 5-->
+<html>
+    <head>
+        <meta charset="UTF-8"/> <!--cho phep hien thi unicode: tieng viet, tieng nhat, han-->
+        <meta name="description" content="Khoa hoc HTML co ban"/> <!--cho phep tm kiem trong the tim kiem cua google-->
+        <meta name="keywords" content="HTML, CSS, JavaScript, Java, Spring, MySQL, Maven"/> <!--tu khoa tim kiem-->
+        <meta name="author" content="King Kong"> <!--thong tin lien quan tac gia-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--thay doi kich thuoc trang web theo tung thiet bi-->
+        <title> HTML Core </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body topmargin="50" rightmargin="50" leftmargin="50">
+        <!--Block-->
+        <p>
+            Email: vuhung2881999@gmail.com
+        </p>
+        <p>
+            Mobile: 0366310685
+        </p>
+        <!--Inline-->
+        <b>Date Of Birth: 1999</b> <!--chu dam-->
+        <i>Address: Thai Binh</i> <!--chu nghieng-->
+
+        <!--division-->
+        <div id="header" name="header">
+            Tag div(header): Thuong su dung nhu la mot container, chua cac the khac, hoac phan chia layout cho 1 website
+        </div>
+        <div id="body" name="body">
+            <!--Tag div(body): Thuong su dung nhu la mot container, chua cac the khac, hoac phan chia layout cho 1 website-->
+            <!--table-->
+            <table>
+                <!--dinh nghia header cua table-->
+                <tr>
+                    <th>Name</th>
+                    <th>Telephone</th>
+                </tr>
+                <tr>
+                    <td>Vu Van Hung</td>
+                    <td>0366310685</td>
+                </tr>
+            </table>
+
+            <!--Khong sap xep-->
+            <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+            <!--Co sap xep-->
+            <ol>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+
+            <!--form thiet ke cho phep nguoi dung tuong tac voi trang web-->
+            <!--label va input la inline-->
+            <form action="https://github.com">
+                <label for="firstName">Ho:</label> <input type="text" id="firstName" name="firstName"/>
+                <br> <br>
+                <label for="lastName">Ten:</label> <input type="text" id="lastName" name="lastName"/>
+                <br> <br>
+                <label for="passWord">Mat Khau:</label> <input type="password" name="passWord" id="passWord" size="100" />
+                <br> <br>
+                <label for="email">Email:</label> <input type="email" name="email" id="email">
+                <br> <br>
+                <input type="button" name="button" id="submit" value="OK"/>
+                <input type="submit" name="button" id="submit" value="OK(sub)" style="background: blue; color: white"/>
+                <br> <br>
+                <img src="https://cdn0.iconfinder.com/data/icons/outlined-emoticons-pack/200/emoticons_troll-512.png" alt="photo1" width="42" height="42">
+                <!--target'blank' mo link trong tab moi-->
+                <a href="https://github.com" target="_blank">Go to pornhub.com</a>
+                <br> <br>
+                <h3>Are you GAY?? :) ??</h3>
+                <select name="" id="">
+                    <option value="yes">Yes</option>
+                    <option value="alright">Đúng</option>
+                    <option value="ok">Ờ, bố gay</option>
+                </select>
+                <br> <br>
+                <textarea name="massage" id="" cols="30" rows="3"></textarea>
+            </form>
+        </div>
+        <div id="footer" name="footer">
+            <!--Tag div(footer): Thuong su dung nhu la mot container, chua cac the khac, hoac phan chia layout cho 1 website-->
+            <!--heading: kich thuoc h1->h6-->
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <hr/>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </div>
+    </body>
+</html>
+

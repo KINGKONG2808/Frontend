@@ -1,0 +1,9 @@
+img {
+    background-attachment: fixed;
+    background-size: 500px 500px;
+    background-position: center
+}
+
+#body {
+    position: relative;
+}

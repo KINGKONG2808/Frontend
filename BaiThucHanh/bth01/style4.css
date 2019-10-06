@@ -1,0 +1,13 @@
+table, tr {
+    border: 0.1px gray;
+    width: 100%;
+    height: 100%;
+    background: deepskyblue;
+    color: whitesmoke
+}
+th:hover {
+    background: red;
+    color: darkblue;
+}
+
+

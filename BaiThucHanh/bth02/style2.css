@@ -1,0 +1,38 @@
+body {
+    background-color: #FFFFCC
+}
+
+#header h1 {
+    color: #006600;
+    text-align: center
+}
+
+#header h2 {
+    color: #0000FF;
+}
+
+#body {
+    font-style: italic;
+    text-align: center;
+}
+
+#body h2 {
+    background-color: #FECFFD;
+    color: #FF3399;
+}
+
+#body hr {
+    max-width: 500px;
+}
+
+#body #p1 {
+    color: red;
+}
+
+#body #p2 {
+    color: blue;
+}
+
+#body #p3 {
+    color: green;
+}
