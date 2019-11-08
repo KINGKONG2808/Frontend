@@ -10,6 +10,10 @@
             padding: 0;
         }
         
+        body {
+            padding: 50px;
+        }
+        
         #header h1 {
             text-align: center;
         }
@@ -21,6 +25,8 @@
         }
         
         #header .element1 .img-content {
+            margin-left: 20%;
+            margin-bottom: 10%;
             width: 400px;
             height: 400px;
         }
@@ -30,22 +36,35 @@
             border: 10px solid red;
             font-size: 20px;
             width: 300px;
-            height: 300px;
+            height: 100px;
+            top: 300px;
+            right: 800px;
         }
         
         #header .element2 {
             float: left;
             width: 70%;
             font-size: 30px;
+            /* padding: 20px; */
+            display: block;
         }
         
-        #header .element2 h6 {
+        #header .element3 {
+            display: inline-block;
+            font-size: 30px;
+        }
+        
+        #header .element3 h6 {
             text-align: right;
         }
     </style>
     <script>
         function showinfor() {
             document.getElementById('show').style.display = "table-row";
+        }
+
+        function showE2() {
+            document.getElementById('show2').style.display = "table-row";
         }
 
         function hideinfor() {
@@ -56,17 +75,22 @@
 
 <body>
     <div id="header">
-        <h1>Mắt sư tử cái đổi màu sau trận ác chiến với lợn bướu</h1> <br>
+        <h1 id="show2" hidden>Mắt sư tử cái đổi màu sau trận ác chiến với lợn bướu</h1> <br>
         <div class="element1">
-            <img class="img-content" onmouseover="showinfor();" onmouseout="hideinfor();" src="https://i-vnexpress.vnecdn.net/2019/11/07/VNE-Eye-9593-1573103558.jpg" alt="img">
+            <img class="img-content" onmouseover="showinfor();" onmouseout="hideinfor();" onclick="showE2();" src="https://i-vnexpress.vnecdn.net/2019/11/07/VNE-Eye-9593-1573103558.jpg" alt="img">
             <div class="content" id="show" hidden>
-                <p>NAM PHIThương tích từ cuộc đối đầu với lợn bướu khiến một bên mắt sư tử cái đổi màu xanh tím như đúc từ thủy tinh.</p>
+                <p>NAM PHI, Thương tích từ cuộc đối đầu với lợn bướu khiến một bên mắt sư tử cái đổi màu xanh tím như đúc từ thủy tinh.</p>
             </div>
         </div>
+
         <div class="element2">
             <p>Con sư tử cái có biệt danh "Mắt biếc" bị ngà lợn bướu chọc vào mắt trong lúc đi săn cách đây hai năm ở khu bảo tồn Shamwari Game Reserve. Kết quả là mắt nó sưng vù và chuyển từ màu xanh lá sang xanh dương ngả tím do mạch máu bên trong dồn
-                lên gần bề mặt.</p>
-            <p>Theo các cán bộ quản lý khu bảo tồn, dù bị thương, Mắt biếc vẫn là thợ săn đáng gờm nhất trong đàn của nó. Nhiếp ảnh gia Sarsha Rinkovec đến từ Melbourne, Australia, bắt gặp con sư tử khi ghé thăm khu bảo tồn.</p>
+                lên gần bề mặt.
+            </p>
+            <p> Theo các cán bộ quản lý khu bảo tồn, dù bị thương, Mắt biếc vẫn là thợ săn đáng gờm nhất trong đàn của nó. Nhiếp ảnh gia Sarsha Rinkovec đến từ Melbourne, Australia, bắt gặp con sư tử khi ghé thăm khu bảo tồn.</p>
+        </div>
+
+        <div class="element3">
             <p>"Đó là một buổi chiều mát mẻ với những đám mây mưa xầm xì và tia nắng Mặt Trời rải rác chiếu xuyên qua tầng mây. Ngay trước khi Mặt Trời lặn, chúng tôi trông thấy con sư tử cái và em gái nó trên đỉnh đồi ở điểm đi săn thuận lợi. Tôi nhìn chăm
                 chú Mắt biếc bởi vì nó quá đặc biệt. Nó là một con sư tử cái to lớn và vạm vỡ", Rinkovec chia sẻ.</p>
             <p>Theo Rinkovec, Mắt biếc là sư tử đầu đàn và nó đang dạy những thành viên nhỏ tuổi hơn săn mồi. Bác sĩ thú y ở khu bảo tồn đã kiểm tra Mắt biếc và kết luận sức khỏe của nó rất tốt. Con sư tử bị mù ở bên mắt đổi màu nhưng điều này không ảnh
