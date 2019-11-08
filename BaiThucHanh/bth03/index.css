@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: pink;
+}
+
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    color: black
+}
+
+.menu ul li a:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+.menu ul li>.drop {
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover .drop {
+    display: block;
+}
