@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mui Ne</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            padding: 20px;
+        }
+        
+        .element1 {
+            float: left;
+            width: 20%;
+            position: relative;
+        }
+        
+        .element1 .img-cont {
+            width: 400px;
+            height: 200px;
+        }
+        
+        .element1 .title {
+            position: absolute;
+            top: 250px;
+            left: 50px;
+            font-size: 15px;
+            width: 500px;
+            height: 150px;
+        }
+        
+        .element2 {
+            float: right;
+            width: 79%;
+            font-size: 20px;
+            border: 5px solid red;
+            border-style: dashed;
+            /* margin-right: 100px; */
+        }
+        
+        .element2 p {
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function showinfor() {
+            document.getElementById('show').style.display = "table-row";
+        }
+
+        function showcontent() {
+            document.getElementById('show-content').style.display = "block";
+        }
+
+        function hideinfor() {
+            document.getElementById('show').style.display = "none";
+        }
+
+        function hidencontent() {
+            document.getElementById('page').style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <div class="element1">
+            <img src="anh.png" class="img-cont" align="right" alt="img" onmouseover="showinfor();" onmouseout="hideinfor();" onclick="showcontent();" onclick="hidencontent();">
+            <div id="show" class="title" hidden>
+                <h1>Nũi né huyền bí và quyến rũ</h1>
+            </div>
+        </div>
+        <div class="element2" id="show-content" hidden>
+            <p>
+                Definition and Usage The display property sets or returns the element's display type. Elements in HTML are mostly "inline" or "block" elements: An inline element has floating content on its left and right side. A block element fills the entire line, and
+                nothing can be displayed on its left or right side. The display property also allows the author to show or hide an element. It is similar to the visibility property. However, if you set display:none, it hides the entire element, while
+                visibility:hidden means that the contents of the element will be invisible, but the element stays in its original position and size. Tip: If an element is a block element, its display type can also be changed with the float property. Definition
+                and Usage The display property sets or returns the element's display type. Elements in HTML are mostly "inline" or "block" elements: An inline element has floating content on its left and right side. A block element fills the entire line,
+                and nothing can be displayed on its left or right side. The display property also allows the author to show or hide an element. It is similar to the visibility property. However, if you set display:none, it hides the entire element, while
+                visibility:hidden means that the contents of the element will be invisible, but the element stays in its original position and size. Tip: If an element is a block element, its display type can also be changed with the float property. Definition
+                and Usage The display property sets or returns the element's display type. Elements in HTML are mostly "inline" or "block" elements: An inline element has floating content on its left and right side. A block element fills the entire line,
+                and nothing can be displayed on its left or right side. The display property also allows the author to show or hide an element. It is similar to the visibility property. However, if you set display:none, it hides the entire element, while
+                visibility:hidden means that the contents of the element will be invisible, but the element stays in its original position and size. Tip: If an element is a block element, its display type can also be changed with the float property. Definition
+                and Usage The display property sets or returns the element's display type. Elements in HTML are mostly "inline" or "block" elements: An inline element has floating content on its left and right side. A block element fills the entire line,
+                and nothing can be displayed on its left or right side. The display property also allows the author to show or hide an element. It is similar to the visibility property. However, if you set display:none, it hides the entire element, while
+                visibility:hidden means that the contents of the element will be invisible, but the element stays in its original position and size. Tip: If an element is a block element, its display type can also be changed with the float property. Definition
+                and Usage The display property sets or returns the element's display type. Elements in HTML are mostly "inline" or "block" elements: An inline element has floating content on its left and right side. A block element fills the entire line,
+                and nothing can be displayed on its left or right side. The display property also allows the author to show or hide an element. It is similar to the visibility property. However, if you set display:none, it hides the entire element, while
+                visibility:hidden means that the contents of the element will be invisible, but the element stays in its original position and size. Tip: If an element is a block element, its display type can also be changed with the float property.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
