@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mũi Né</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main {
+            display: flex;
+        }
+        
+        .img-title,
+        .content {
+            padding: 5px;
+        }
+        
+        .img-title .title h1 {
+            margin: 2%;
+            position: absolute;
+            border: 2px solid red;
+            background-color: greenyellow;
+            color: purple;
+        }
+        
+        .content p {
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function showInfor() {
+            document.getElementById('show').style.display = "block";
+        }
+
+        function hiddenInfor() {
+            document.getElementById('show').style.display = "none";
+        }
+
+        function clickEle() {
+            document.getElementById('element-content').style.display = "block";
+        }
+
+        function clickOut() {
+            document.getElementById('element-content').style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img-title">
+            <button onblur="clickOut();">
+                <img class="image" src="anh.png" alt="Photo" onmouseover="showInfor();" onmouseout="hiddenInfor();" onclick="clickEle();" />
+            </button>
+            <div class="title" id="show" hidden>
+                <h1>Mũi Né - Huyền bí và quyến rũ</h1>
+            </div>
+        </div>
+        <div class="content" id="element-content" hidden>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem molestiae porro consectetur placeat? Expedita voluptas quaerat quidem nobis, incidunt voluptatibus aliquam praesentium ullam. Natus numquam animi necessitatibus distinctio magnam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis porro unde repellat rem sequi, minima deleniti commodi quod? Pariatur, voluptate. Harum voluptates itaque deleniti repellat officiis, ratione architecto omnis nisi! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quam ex? Deleniti molestias laborum itaque, incidunt perspiciatis rem iusto nemo quidem laudantium ullam voluptas reiciendis molestiae quae amet sint omnis. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Necessitatibus voluptatibus, et ad consequuntur ipsam obcaecati unde maxime dolorum ab porro perspiciatis aperiam molestias aut quod harum nostrum eligendi doloremque magni. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolorem quidem molestiae porro consectetur placeat? Expedita voluptas quaerat quidem nobis, incidunt voluptatibus aliquam praesentium ullam. Natus numquam animi necessitatibus distinctio magnam. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Veritatis porro unde repellat rem sequi, minima deleniti commodi quod? Pariatur, voluptate. Harum voluptates itaque deleniti repellat officiis, ratione architecto omnis nisi! Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ipsa, quam ex? Deleniti molestias laborum itaque, incidunt perspiciatis rem iusto nemo quidem laudantium ullam voluptas reiciendis molestiae quae amet sint omnis. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Necessitatibus voluptatibus, et ad consequuntur ipsam obcaecati unde maxime dolorum ab porro perspiciatis aperiam molestias aut quod harum nostrum eligendi doloremque magni. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Dolorem quidem molestiae porro consectetur placeat? Expedita voluptas quaerat quidem nobis, incidunt voluptatibus aliquam praesentium ullam. Natus numquam animi necessitatibus distinctio magnam. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Veritatis porro unde repellat rem sequi, minima deleniti commodi quod? Pariatur, voluptate. Harum voluptates itaque deleniti repellat officiis, ratione architecto omnis nisi! Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Ipsa, quam ex? Deleniti molestias laborum itaque, incidunt perspiciatis rem iusto nemo quidem laudantium ullam voluptas reiciendis molestiae quae amet sint omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                voluptatibus, et ad consequuntur ipsam obcaecati unde maxime dolorum ab porro perspiciatis aperiam molestias aut quod harum nostrum eligendi doloremque magni.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
