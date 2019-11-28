@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>menu 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        .menu {
+            text-align: center;
+            list-style-type: none;
+            background-color: red;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        .menu li {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        .menu li a {
+            background-color: red;
+            color: white;
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .menu li a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .menu .drop1 {
+            display: none;
+            position: absolute;
+        }
+        
+        .menu .drop1 li a {
+            background-color: green;
+            color: white;
+        }
+        
+        .menu li:hover .drop1 {
+            display: block;
+            top: 55px;
+        }
+        
+        .menu .drop2 {
+            display: none;
+            position: absolute;
+        }
+        
+        .menu .drop1 li:hover .drop2 {
+            display: inline-block;
+            top: 0;
+            left: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="menu2.html" target="_blank">Home</a></li>
+        <li>
+            <a href="">a</a>
+            <ul class="drop1">
+                <li><a href="">a1</a></li>
+                <li><a href="">a2</a></li>
+                <li><a href="">a3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">b</a>
+            <ul class="drop1">
+                <li><a href="">b1</a></li>
+                <li>
+                    <a href="">b2</a>
+                    <ul class="drop2">
+                        <li><a href="">b2-1</a></li>
+                        <li><a href="">b2-2</a></li>
+                    </ul>
+                </li>
+                <li><a href="">b3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

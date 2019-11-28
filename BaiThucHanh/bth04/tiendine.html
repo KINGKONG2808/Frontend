@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript">
+	function tinhtien()
+	{
+		if(mh.value==""||sd.value==""||dg.value=="")
+		alert('khong de trong');
+		else{
+			if(sd.value<=10)
+			{
+				var a=sd.value*dg.value*hskv.value*(70/100);
+				
+				window.document.dien.td.value=a;
+				window.document.dien.pl.value="Hộ nghèo";
+			}
+			else
+			{
+				var b=sd.value*dg.value*hskv.value;
+				
+				window.document.dien.td.value=b;
+				window.document.dien.pl.value="Hộ thường";
+
+			}
+		
+		}
+	}
+</script>
+
+</head>
+
+<body>
+
+<table border="1px" width="1000px" height="120px">
+<form method="post" name="dien" action="#">
+<h2 align="center">Hoa don tien dien</h2>
+	<tr>
+    	<td width="70px" height="30px">Mã hộ</td>
+        <td><input type="text" id="mh"  /></td>
+        <td width="70px" height="30px">Số điện</td>
+        <td><input type="text" id="sd"/></td>
+        <td width="70px" height="30px">Hệ số khu vực</td>
+        <td><input type="text" id="hskv"/></td>
+    </tr>
+    <tr>
+    	<td width="70px" height="30px" bgcolor="#FFFFCC">Tiền điện</td>
+        <td bgcolor="#FFFFCC"><input type="text" id="td"/></td>
+        <td width="70px" height="30px">Đơn giá</td>
+        <td><input type="text" id="dg"/>VNĐ/KW</td>
+        <td width="70px" height="30px">Phan loai</td>
+        <td><input type="text" id="pl"/></td>
+    </tr>
+        
+   <tr>
+    	<td width="70px" height="30px"></td>
+        <td></td>
+        <td width="70px" height="30px"><input type="button" id="kq" value="Ket Qua" name="kq" onclick="tinhtien()"/></td>
+        <td></td>
+        <td width="70px" height="30px"><input type="reset" value="reset"/></td>
+        <td></td>
+    </tr>
+    </form>
+</table>
+</body>
+</html>
