@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+    background-color: antiquewhite;
+}
+
+table {
+    border: 2px solid red;
+    background-color: green;
+    color: white;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+table tr td h5 {
+    text-align: center;
+}
+
+.submit {
+    text-align: center;
+}
+
+.alert {
+    color: white;
+}

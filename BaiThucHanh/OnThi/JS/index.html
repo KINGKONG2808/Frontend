@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/JS/index.css">
+    <script src="/JS/index.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h5>Form sign in</h5>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">User name:</label></td>
+            <td><input type="text" id="user" placeholder="Enter your username ..."></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="alert"><span id="errorUser"></span></td>
+        </tr>
+        <tr>
+            <td><label for="">Password:</label></td>
+            <td><input type="password" id="password" placeholder="Enter your password ..."></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="alert"><span id="errorPassword"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="submit">
+                <input type="submit" name="submit" onclick="submit();">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

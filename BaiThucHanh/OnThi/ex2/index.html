@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fuck U</title>
+    <script>
+        function validateEmail() {
+            var email = document.getElementById('email').value;
+            var reg = /\w+[\.-]?\w+@\[a-zA-z]+\.\[a-zA-Z]{1,4}/;
+            var result = reg.test(email);
+            if (result) {
+                alert('Done');
+            } else {
+                alert('Loss');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <div style="display: flex;">
+            <div><label for="">Email </label></div>
+            <div><input type="text" id="email"> </div>
+        </div>
+        <div>
+            <button onclick="validateEmail();">Check</button>
+        </div>
+    </form>
+</body>
+
+</html>

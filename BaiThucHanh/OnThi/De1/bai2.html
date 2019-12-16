@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dang ky thong tin</title>
+    <style>
+        .field {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <h1>DANG KY THONG TIN</h1>
+            <div class="field username">
+                <div><label for="">Ten dang nhap</label></div>
+                <div><input type="text" id="username"></div>
+                <div><span id="errorUser"></span></div>
+            </div>
+            <div class="field password">
+                <div><label for="">Mat khau</label></div>
+                <div><input type="password" id="password"></div>
+                <div><span id="errorPass"></span></div>
+            </div>
+            <div class="field gender">
+                <div><label for="">Gioi tinh</label></div>
+                <div><input type="radio" id="male"><b>Nam</b></div>
+                <div><input type="radio" id="female"><b>Nu</b></div>
+                <div><span id="errorGender"></span></div>
+            </div>
+            <div class="field phone">
+                <div><label for="">So dien thoai</label></div>
+                <div><input type="text" id="phone"></div>
+                <div><span id="errorPhone"></span></div>
+            </div>
+            <div class="field description">
+                <div><label for="">Gioi thieu</label></div>
+                <div><textarea cols="30" rows="10" id="description"></textarea></div>
+                <div><span id="errorDescription"></span></div>
+            </div>
+            <div class="field btn">
+                <div><input type="submit" value="Dang ky" onclick="validateForm();"></div>
+                <div><input type="reset" value="Huy bo"></div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var male = document.getElementById('male');
+            var female = document.getElementById('female');
+            var phone = document.getElementById('phone').value;
+            var description = document.getElementById('description').value;
+
+            if (username == null || username == "") {
+                document.getElementById('errorUser').innerHTML = "Khong bo trong truong ten dang nhap";
+                document.getElementById('username').focus();
+                return false;
+            } else {
+                document.getElementById('errorUser').innerHTML = "";
+            }
+
+            if (password == null || password == "") {
+                document.getElementById('errorPass').innerHTML = "Khong bo trong truong mat khau";
+                document.getElementById('password').focus();
+                return false;
+            } else {
+                document.getElementById('errorPass').innerHTML = "";
+            }
+
+
+            if (male.checked == false && female.checked == false) {
+                document.getElementById('errorGender').innerHTML = "Vui long chon gioi tinh cua ban";
+                return false;
+            } else {
+                document.getElementById('errorGender').innerHTML = "";
+            }
+
+            var reg = /^(\d[\.-]?){10,12}$/;
+            var result = reg.test(phone);
+            if (phone == null || phone == "") {
+                document.getElementById('errorPhone').innerHTML = "Khong bo trong truong so dien thoai";
+                document.getElementById('phone').focus();
+                document.getElementById('phone').select();
+                return false;
+            } else {
+                if (!result) {
+                    document.getElementById('errorPhone').innerHTML = "So dien thoai khong dung dinh dang";
+                    document.getElementById('phone').focus();
+                    document.getElementById('phone').select();
+                    return false;
+                } else {
+                    document.getElementById('errorPhone').innerHTML = "";
+                }
+            }
+
+            if (description == null || description == "") {
+                document.getElementById('errorDescription').innerHTML = "Khong bo trong truong gioi thieu";
+                document.getElementById('description').focus();
+                return false;
+            } else {
+                document.getElementById('errorDescription').innerHTML = "";
+            }
+
+            alert('Submit complete !!!');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid red;
+    margin-top: 50px;
+}
+
+
+/* customize header */
+
+.header {
+    display: flex;
+    font-size: 15px;
+}
+
+img {
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+}
+
+.header .title {
+    padding: 10px;
+    margin: auto;
+}
+
+.header .title .infor {
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+
+/* body */
+
+.container {
+    display: flex;
+    font-size: 15px;
+}
+
+
+/* menu */
+
+.menu {
+    margin-left: 10px;
+}
+
+.menu .menu1,
+.menu2,
+.menu3 {
+    text-align: center;
+    list-style-type: none;
+}
+
+.menu .menu1 li {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.menu .menu1 li a {
+    display: block;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+}
+
+.menu .menu1 li:hover .menu2 {
+    display: block;
+    top: 55px;
+}
+
+.menu .menu1 li a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.menu .menu1 .menu2 {
+    display: none;
+    position: absolute;
+}
+
+.menu .menu1 .menu2 li:hover .menu3 {
+    display: inline-block;
+    top: 0;
+    left: 255px;
+}
+
+.menu .menu1 .menu2 .menu3 {
+    display: none;
+    position: absolute;
+}
+
+.list-product {
+    background-color: red;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.product {
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.row-product {
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.btn>button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.infor-product {
+    text-align: center;
+    padding-left: 10px;
+}
+
+.news1,
+.news2 {
+    border: 1px solid red;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 5px;
+    width: 230px;
+    text-align: center;
+}
+
+.news2 {
+    margin-top: 10px;
+}
+
+.news1>h2,
+.news2>h2 {
+    background-color: red;
+    border-top-left-radius: 10px;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+}
+
+.news1>i {
+    font-size: 20px;
+}
+
+.new-product {
+    display: flex;
+}
+
+.new-product div>p {
+    padding: 10px;
+}
+
+.new-img {
+    height: 50px;
+    width: 100px;
+}
