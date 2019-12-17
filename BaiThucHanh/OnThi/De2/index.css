@@ -63,3 +63,136 @@ body {}
     background-color: red;
     color: white;
 }
+
+.banner .home,
+.banner .contact {
+    background-color: #999999;
+    color: black;
+    border: 1px solid red;
+}
+
+.body {
+    display: flex;
+}
+
+
+/* M E N U */
+
+.menu {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu ul li {
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    position: relative;
+    margin-top: 1px;
+    border-right: 10px solid yellowgreen;
+}
+
+.menu ul li a {
+    background-color: #CCCCCC;
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+}
+
+.menu>ul li a:hover {
+    color: #FFFF00;
+}
+
+.menu .drop1 {
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover .drop1 {
+    display: inline-block;
+    top: 0;
+    left: 201px;
+}
+
+.drop1 li a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* CONTENT */
+
+.content {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.product {
+    height: 50px;
+    line-height: 50px;
+    width: 300px;
+}
+
+.product h1 {
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.row1 {
+    display: flex;
+}
+
+.name-product {
+    display: flex;
+    margin-left: 50px;
+}
+
+.name-product>div a {
+    padding-left: 20px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.name-product>div a::after {
+    content: ' >> ';
+}
+
+.row2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.phone {
+    width: 300px;
+}
+
+.image-phone {
+    display: flex;
+    margin-top: 20px;
+}
+
+.image-phone>div {
+    margin-left: 50px;
+}
+
+.image-phone>div img {
+    height: 100px;
+    width: 80px;
+}
+
+.image-phone>div h6 {
+    font-size: 13px;
+    text-align: center;
+}
+
+.accessories {
+    display: flex;
+}
