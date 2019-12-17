@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cau 2</title>
+</head>
+
+<body>
+    <div>
+        <form action="" onsubmit="return find();">
+            <div style="display: flex;">
+                <div><label for="">Họ và tên:</label></div>
+                <div><input type="text" id="input"></div>
+                <div><span style="color: red;" id="errorInput"></span></div>
+            </div>
+            <div style="display: flex;">
+                <div><label for="">Họ</label></div>
+                <div><input type="text" id="output" disabled></div>
+            </div>
+            <div style="display: flex;">
+                <div><input type="submit" value="Hiển thị"></div>
+                <div><input type="reset" value="Huỷ bỏ"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function find() {
+            let fullName = document.getElementById('input').value;
+            // /[\s]*\w+/
+            let regex = fullName.match(/\w+\S/);
+            if (fullName == "" || fullName == null) {
+                document.getElementById('errorInput').innerHTML = "Không được bỏ trống trường này !!";
+            } else {
+                document.getElementById('errorInput').innerHTML = "";
+                document.getElementById('output').value = regex;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

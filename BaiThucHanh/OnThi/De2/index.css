@@ -73,13 +73,14 @@ body {}
 
 .body {
     display: flex;
+    margin: auto;
 }
 
 
 /* M E N U */
 
 .menu {
-    margin-left: 20px;
+    margin-left: 150px;
     margin-top: 20px;
 }
 
@@ -140,7 +141,7 @@ body {}
 }
 
 .product h1 {
-    background-color: red;
+    background-color: yellow;
     color: white;
     text-align: center;
 }
@@ -155,14 +156,14 @@ body {}
 }
 
 .name-product>div a {
-    padding-left: 20px;
+    padding-left: 50px;
     width: 200px;
     height: 60px;
     line-height: 60px;
 }
 
 .name-product>div a::after {
-    content: ' >> ';
+    content: ' > ';
 }
 
 .row2 {
@@ -195,4 +196,29 @@ body {}
 
 .accessories {
     display: flex;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.accessories>div h3 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.accessories>div h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.accessories>div h3 a:hover {
+    color: red;
+}
+
+.accessories>div i {
+    color: red;
+    padding-left: 90px;
+}
+
+.accessories>div i::after {
+    content: ' (VND)';
 }
