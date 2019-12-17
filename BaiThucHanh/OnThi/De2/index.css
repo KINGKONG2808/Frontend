@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {}
+
+.header {
+    max-width: 900px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-img {
+    height: 200px;
+    width: 200px;
+}
+
+.search-text {
+    height: 40px;
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.logo>div button {
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+.banner>ul {
+    display: flex;
+}
+
+.banner>ul li {
+    list-style-type: none;
+    padding-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    width: 120px;
+}
+
+.banner>ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+.banner>ul li a:hover {
+    background-color: red;
+    color: white;
+}

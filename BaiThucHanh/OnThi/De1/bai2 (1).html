@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .colum {
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 500px;margin:0 auto;border:1px solid grey;">
+        <form onsubmit="return validateForm();">
+            <div style="display: flex;">
+                <div class="colum">Ten dang nhap</div>
+                <div>
+                    <input type="text" id="username"> <br>
+                    <span id="errorUsername" style="color:red;"></span>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="colum">Mat khau</div>
+                <div><input type="text" id="password"><br>
+                    <span id="errorPassword" style="color:red;"></span>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="colum">Gioi tinh</div>
+                <div>
+                    <input type="radio" id="male" name="gt" value="male"> Nam
+                    <input type="radio" id="female" name="gt" value="female"> Nu <br>
+                    <span id="errorGender" style="color:red;"></span>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="colum">So dien thoai</div>
+                <div><input type="text" id="phone"><br>
+                    <span id="errorPhone" style="color:red;"></span>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="colum">Gioi thieu</div>
+                <div><textarea name="" id="description" cols="30" rows="10"></textarea> <br>
+                    <span id="errorDescription" style="color:red;"></span>
+                </div>
+            </div>
+            <div style="padding-left:120px">
+                <input type="submit" value="check">
+                <input type="reset" value="reset">
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var gender = document.getElementsByName('gt');
+
+            var phone = document.getElementById('phone').value;
+            var description = document.getElementById('description').value;
+            flag = true;
+            if (username == "") {
+                document.getElementById('errorUsername').innerHTML = "Ten dang nhap khong duoc de trong!";
+                flag = false;
+            } else {
+                document.getElementById('errorUsername').innerHTML = "";
+
+            }
+
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked == false) {
+                    document.getElementById('errorGender').innerHTML = "Ban phai chon gioi tinh";
+                    flag = false;
+                } else {
+                    document.getElementById('errorGender').innerHTML = "";
+
+                }
+                i++;
+            }
+            if (password == "") {
+                document.getElementById('errorPassword').innerHTML = "Mat khau khong duoc de trong!";
+                flag = false;
+            } else {
+                document.getElementById('errorPassword').innerHTML = "";
+
+            }
+
+            if (phone == "") {
+                document.getElementById('errorPhone').innerHTML = "So dien thoai khong duoc de trong";
+                flag = false;
+            } else {
+                var reg = /^[0][2-9]+[\d.-]{8}$/;
+                var result = reg.test(phone);
+                if (result) {
+                    document.getElementById('errorPhone').innerHTML = "";
+                } else {
+                    document.getElementById('errorPhone').innerHTML = "So dien thoai khong hop le";
+                    document.getElementById('phone').select();
+                    flag = false;
+                }
+            }
+
+            if (description == "") {
+                document.getElementById('errorDescription').innerHTML = "Gioi thieu khong duoc de trong!";
+
+            } else {
+                document.getElementById('errorDescription').innerHTML = "";
+
+            }
+            return flag;
+        }
+    </script>
+</body>
+
+</html>
