@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+    background-color: blanchedalmond;
+}
+
+.header {
+    display: flex;
+    background-color: #0099FF;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+.vn {
+    display: flex;
+    border: 2px solid white;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+.vn>p {
+    height: 20px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.vn>img {
+    width: 50px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.title {
+    border: 2px solid white;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+.title p {
+    height: 20px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.title p:hover {
+    color: #FF3300;
+}
+
+.header>div input {
+    height: 20px;
+    width: 200px;
+    text-align: center;
+    margin: 20px;
+    margin-left: 100px;
+}
+
+.menu {
+    margin-top: 5px;
+}
+
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    background-color: #0099FF;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    background-color: #0099FF;
+    color: white;
+    display: block;
+}
+
+.menu ul li a:hover {
+    color: #FFFF33;
+}
+
+.menu .drop {
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover .drop {
+    display: block;
+    top: 51px;
+}
+
+.drop li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.row1 {
+    background-color: #0099FF;
+    color: white;
+    margin-top: 5px;
+    height: 40px;
+}
+
+.row1>h2 {
+    padding: 10px;
+}
+
+.row2 {
+    display: flex;
+}
+
+.product {
+    display: flex;
+}
